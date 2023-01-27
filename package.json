@@ -1,0 +1,32 @@
+{
+  "name": "task-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index",
+    "dev": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOESTAR117/Task-master.git"
+  },
+  "keywords": [],
+  "author": "Jackson Rios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JOESTAR117/Task-master/issues"
+  },
+  "homepage": "https://github.com/JOESTAR117/Task-master#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
+    "sucrase": "^3.29.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0"
+  }
+}
