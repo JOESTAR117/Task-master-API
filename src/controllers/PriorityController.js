@@ -1,6 +1,6 @@
 import tasks from '../models/TaskData';
 
-const readme = async (req, res) => {
+const readmeTask = async (req, res) => {
   try {
     const priority = req.query;
 
@@ -16,4 +16,25 @@ const readme = async (req, res) => {
   }
 };
 
-export default readme;
+const updateTask = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const task = await tasks.findOne({ _id: id });
+
+    if (task.priority) {
+      task.priority = false;
+    } else {
+      task.priority = true;
+    }
+
+    await task.save();
+
+    return res.status(200).send(task)
+
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
+
+export { readmeTask, updateTask };
