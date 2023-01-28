@@ -6,12 +6,12 @@ import routes from './routes/index.js';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 connectDatabase();
 app.use(express.json());
 app.use(routes);
 
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
