@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { readmeTask, updateTask } from '../controllers/PriorityController';
+import updateTask from '../controllers/ContentController';
+import { readmeTask, updatePriority} from '../controllers/PriorityController';
 import { allTask, createTask, deleteTask } from '../controllers/TaskController';
 
 const routes = Router();
@@ -9,6 +10,8 @@ routes.get('/task', allTask);
 routes.delete('/task/:id', deleteTask);
 
 routes.get('/priorities', readmeTask);
-routes.patch('/priorities/:id', updateTask);
+routes.patch('/priorities/:id', updatePriority);
+
+routes.patch('/content/:id',updateTask)
 
 export default routes;

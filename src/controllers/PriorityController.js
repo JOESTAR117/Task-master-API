@@ -16,7 +16,7 @@ const readmeTask = async (req, res) => {
   }
 };
 
-const updateTask = async (req, res) => {
+const updatePriority = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -30,11 +30,10 @@ const updateTask = async (req, res) => {
 
     await task.save();
 
-    return res.status(200).send(task)
-
+    return res.status(200).send(task);
   } catch (err) {
     res.status(500).send(err.message);
   }
 };
 
-export { readmeTask, updateTask };
+export { readmeTask, updatePriority };
