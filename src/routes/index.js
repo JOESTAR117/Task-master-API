@@ -12,6 +12,6 @@ routes.delete('/task/:id', deleteTask);
 routes.get('/priorities', readmeTask);
 routes.patch('/priorities/:id', updatePriority);
 
-routes.patch('/content/:id',updateTask)
+routes.patch('/contents/:id',updateTask)
 
 export default routes;
