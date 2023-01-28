@@ -1,4 +1,4 @@
-import tasks from '../models/TaskData';
+import tasks from '../models/TaskData.js';
 
 const updateTask = async (req, res) => {
   try {

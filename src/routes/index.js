@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import updateTask from '../controllers/ContentController';
-import { readmeTask, updatePriority} from '../controllers/PriorityController';
-import { allTask, createTask, deleteTask } from '../controllers/TaskController';
+import updateTask from '../controllers/ContentController.js';
+import { readmeTask, updatePriority} from '../controllers/PriorityController.js';
+import { allTask, createTask, deleteTask } from '../controllers/TaskController.js';
 
 const routes = Router();
 
